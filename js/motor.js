@@ -64,6 +64,7 @@ btn.addEventListener('click', function() {
     }
 
     if (valorSeleccion.value == pantallas[posicion].correcta) {
+        valorSeleccion = document.querySelector('input[type=radio]:checked="none"');
         record++;
     }
     posicion++;

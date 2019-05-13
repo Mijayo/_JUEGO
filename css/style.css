@@ -95,7 +95,7 @@ body {
     margin: 6px;
     border: 6px solid rgb(253, 145, 22);
     border-radius: 50%;
-    animation: lds-ring 5.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    animation: lds-ring 1.5s cubic-bezier(0.5, 0, 0.5, 1) infinite;
     border-color: rgb(253, 145, 22) transparent transparent transparent;
 }
 
