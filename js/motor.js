@@ -1,81 +1,40 @@
-var pantallas = [{
-        "titular": "¿ Cuanto sabes de HTML ?",
-        "pregunta": "¿Cuántas etiquetas header puede contener un documento?",
-        "respuestas": [{
-                "A": "Una unica etiqueta",
-                "correcta": "0"
-            },
-            {
-                "B": "Una por seccion",
-                "correcta": "0"
-            },
-            {
-                "C": "Cuantas sean necesarias",
-                "correcta": "1"
-            }
-        ]
-    },
-    {
-        "pregunta": "¿ Cual es el elemento invalido ? ",
-        "respuestas": [{
-                "A": "hgroup",
-                "correcta": "0"
-            },
-            {
-                "B": "progress",
-                "correcta": "0"
-            },
-            {
-                "C": "<post>",
-                "correcta": "1"
-            }
-        ]
-    },
-    {
-        "pregunta": "¿ Cual es el elemento invalido para un input ? ",
-        "respuestas": [{
-                "A": "source",
-                "correcta": "0"
-            },
-            {
-                "B": "pattern",
-                "correcta": "0"
-            },
-            {
-                "C": "required",
-                "correcta": "1"
-            }
-        ]
+// alert("HEllo");
+
+var posicion = 0;
+var record = 0;
+muestrapreguntas(posicion);
+
+function muestrapreguntas(posicion) {
+    document.getElementById("respuesta1").innerHTML = preguntas[posicion].respuesta1;
+    document.getElementById("respuesta2").innerHTML = preguntas[posicion].respuesta2;
+    document.getElementById("respuesta3").innerHTML = preguntas[posicion].respuesta3;
+    document.getElementById("respuesta4").innerHTML = preguntas[posicion].respuesta4;
+}
+
+function siguiente() {
+
+    var valorSeleccion = document.querySelector('input[type=radio]:checked');
+    if (!valorSeleccion) {
+        alert("alogo");
+        return;
     }
-];
 
-yoQueSe();
-
-var spin = setInterval(yoQueSe, 1000);
-
-function yoQueSe() {
-    document.querySelector(".lds-ring").style.display = "block";
-}
-
-function consT() {
-    document.getElementById("h1").innerHTML = pantallas[0].titular;
-    // document.write('<div class="lds-ring">' + "<div></div>" + "<div></div>" + "<div></div>" + "<div></div>" + '</div>');
-}
-
-document.getElementById("h5").innerHTML = pantallas[0].pregunta;
-
-pesada();
-
-function pesada() {
-    for (x = 0; x < pantallas.length; x++) {
-        for (y = 0; y < pantallas[x].respuestas; y++) {
-            document.querySelector(".txtA").innerHTML += pantallas[y].respuestas[x].A;
-            document.querySelector(".txtB").innerHTML += pantallas[y].respuestas[x].B;
-            document.querySelector(".txtC").innerHTML += pantallas[y].respuestas[x].C;
-        }
+    if (valorSeleccion.value == preguntas[posicion].correcta) {
+        record++;
     }
+    posicion++;
+    muestrapreguntas(posicion);
 }
 
 
 
-// var cont = document.write("<div><img class='foto' src=" + pantallas[0].img + "> </div>");2
+
+// "respuesta": [{
+//         "res": "un uno",
+//         "correcta": 0
+//     },
+//     {
+//         "res": "un dos",
+//         "correcta": 1
+//     }
+// ]
