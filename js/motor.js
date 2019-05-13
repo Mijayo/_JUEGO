@@ -1,54 +1,3 @@
-var pantallas = [{
-        "titular": "¿ Cuanto sabes de HTML ?",
-        "pregunta": "¿Cuántas etiquetas header puede contener un documento?",
-        "respuestas": [{
-                "A": "Una unica etiqueta",
-                "correcta": "0"
-            },
-            {
-                "B": "Una por seccion",
-                "correcta": "0"
-            },
-            {
-                "C": "Cuantas sean necesarias",
-                "correcta": "1"
-            }
-        ]
-    },
-    {
-        "pregunta": "¿ Cual es el elemento invalido ? ",
-        "respuestas": [{
-                "A": "hgroup",
-                "correcta": "0"
-            },
-            {
-                "B": "progress",
-                "correcta": "0"
-            },
-            {
-                "C": "<post>",
-                "correcta": "1"
-            }
-        ]
-    },
-    {
-        "pregunta": "¿ Cual es el elemento invalido para un input ? ",
-        "respuestas": [{
-                "A": "source",
-                "correcta": "0"
-            },
-            {
-                "B": "pattern",
-                "correcta": "0"
-            },
-            {
-                "C": "required",
-                "correcta": "1"
-            }
-        ]
-    }
-];
-
 yoQueSe();
 
 var spin = setInterval(yoQueSe, 1000);
@@ -62,9 +11,9 @@ function consT() {
     // document.write('<div class="lds-ring">' + "<div></div>" + "<div></div>" + "<div></div>" + "<div></div>" + '</div>');
 }
 
-document.getElementById("h5").innerHTML = pantallas[0].pregunta;
 
-pesada();
+
+/*pesada();
 
 function pesada() {
     for (x = 0; x < pantallas.length; x++) {
@@ -74,8 +23,53 @@ function pesada() {
             document.querySelector(".txtC").innerHTML += pantallas[y].respuestas[x].C;
         }
     }
+}*/
+
+
+var posicion = 0;
+var record = 0;
+
+muestraPreguntas(posicion);
+
+function muestraPreguntas(posicion) {
+    document.getElementById("h5").innerHTML = pantallas[posicion].pregunta;
+    document.querySelector(".txtA").innerHTML = pantallas[posicion].A;
+    document.querySelector(".txtB").innerHTML = pantallas[posicion].B;
+    document.querySelector(".txtC").innerHTML = pantallas[posicion].C;
 }
 
+/*function siguiente() {
+
+    var valorSeleccion = document.querySelector('input[type=radio]:checked');
+    if (!valorSeleccion) {
+        alert("algo");
+        return;
+    }
+
+    if (valorSeleccion.value == preguntas[posicion].correcta) {
+        record++;
+    }
+    posicion++;
+    muestraPreguntas(posicion);
+}*/
+
+var btn = document.querySelector("#inpuT");
+
+btn.addEventListener('click', function() {
+    var valorSeleccion = document.querySelector('input[type=radio]:checked');
+
+    if (!valorSeleccion) {
+        alert("algo");
+        return;
+    }
+
+    if (valorSeleccion.value == pantallas[posicion].correcta) {
+        record++;
+    }
+    posicion++;
+    muestraPreguntas(posicion);
+
+});
 
 
-// var cont = document.write("<div><img class='foto' src=" + pantallas[0].img + "> </div>");2
+// var cont = document.write("<div><img class='foto' src=" + pantallas[0].img + "> </div>");
