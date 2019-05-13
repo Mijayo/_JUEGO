@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Juego</title>
+</head>
+
+<body onload="consT()">
+    <div class="header">
+        <h1 id="h1"></h1>
+    </div>
+    <div><img class="foto" src="img/_1.png" alt=""></div>
+
+    <div id="caja">
+        <span id="margH5"><h5 id="h5"></h5></span>
+        <ul>
+            <li class="flexUL"><input class="inpuT" type="radio" value="">
+                <p class="txtA"></p>
+            </li>
+            <li class="flexUL"><input class="inpuT" type="radio" value="">
+                <p class="txtB"></p>
+            </li>
+            <li class="flexUL"><input class="inpuT" type="radio" value="">
+                <p class="txtC"></p>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <input id="inpuT" type="button" value="enviar">
+    </div>
+
+    <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+</body>
+<script src="js/datos.js"></script>
+<script src="js/motor.js"></script>
+
+</html>
