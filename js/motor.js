@@ -18,36 +18,6 @@ function cambiaPantalla() {
 
 setTimeout("cambiaPantalla()", 2000);
 
-/*pesada();
-
-function pesada() {
-    for (x = 0; x < pantallas.length; x++) {
-        for (y = 0; y < pantallas[x].respuestas; y++) {
-            document.querySelector(".txtA").innerHTML += pantallas[y].respuestas[x].A;
-            document.querySelector(".txtB").innerHTML += pantallas[y].respuestas[x].B;
-            document.querySelector(".txtC").innerHTML += pantallas[y].respuestas[x].C;
-        }
-    }
-}*/
-
-
-
-
-/*function siguiente() {
-
-    var valorSeleccion = document.querySelector('input[type=radio]:checked');
-    if (!valorSeleccion) {
-        alert("algo");
-        return;
-    }
-
-    if (valorSeleccion.value == preguntas[posicion].correcta) {
-        record++;
-    }
-    posicion++;
-    muestraPreguntas(posicion);
-}*/
-
 var posicion = 0;
 var record = 0;
 
@@ -94,6 +64,3 @@ btn.addEventListener('click', function() {
         document.getElementById("caja").innerHTML = `<div> ${record}</div>`;
     }
 });
-
-
-// var cont = document.write("<div><img class='foto' src=" + pantallas[0].img + "> </div>");
