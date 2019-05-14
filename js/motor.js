@@ -16,10 +16,11 @@ function cambiaPantalla() {
     document.querySelector(".conT").style.display = "block";
 }
 
-setTimeout("cambiaPantalla()", 2000);
+setTimeout("cambiaPantalla()", 2500);
 
 var posicion = 0;
 var record = 0;
+var fallaste = 0;
 
 muestraPreguntas(posicion);
 
@@ -38,13 +39,14 @@ btn.addEventListener('click', function() {
         var valorSeleccion = document.querySelector('input[type=radio]:checked');
 
         if (!valorSeleccion) {
-            console.log("algo");
+            alert("selecciona una opcion para continuar");
             return;
         } else if (valorSeleccion.value == pantallas[posicion].correcta) {
             console.log("correcta");
             record++;
         } else {
             console.log("fallaste");
+            fallaste++;
         }
         posicion++;
         muestraPreguntas(posicion);
@@ -53,14 +55,26 @@ btn.addEventListener('click', function() {
         var valorSeleccion = document.querySelector('input[type=radio]:checked');
         if (!valorSeleccion) {
             console.log("algo");
+            cambiaPantalla();
             return;
         } else if (valorSeleccion.value == pantallas[posicion].correcta) {
             console.log("correcta");
             record++;
         } else {
             console.log("fallaste");
+            fallaste++;
         }
         document.getElementById("caja").innerHTML = "";
-        document.getElementById("caja").innerHTML = `<div> ${record}</div>`;
+        document.getElementById("caja").innerHTML = `<div id='cajaFin'>
+                                                        <div>
+                                                        <div id='txtCorr'>Correctas</div>
+                                                        </div>
+                                                        ${'<p class="txtP"><span id="textRecord">'+record+'</span></p>'}
+                                                        <div>
+                                                        <div id='txtIncorr'>Incorrectas</div>
+                                                        </div>
+                                                        ${'<p class="txtP"><span id="textFallos">'+fallaste+'</span></p>'}
+                                                    </div> `;
+        btn.value = "volver";
     }
 });

@@ -8,9 +8,10 @@ body {
 .conT {}
 
 #h1 {
-    color: white;
+    /* color: white; */
     text-align: center;
-    color: rgb(253, 145, 22);
+    /* color: rgb(253, 145, 22); */
+    color: black;
     font-size: 25px;
     padding-top: 20px;
 }
@@ -50,15 +51,64 @@ body {
     /* justify-content: center; */
 }
 
+#txtCorr {
+    color: rgb(46, 204, 113);
+    /* margin-top: 40px; */
+    font-weight: 800;
+    font-size: 22px;
+    /* padding-bottom: 5px; */
+    padding-top: 35px;
+}
+
+#textRecord {
+    color: rgb(46, 204, 113);
+    font-weight: 800;
+}
+
+#textFallos {
+    color: rgb(231, 76, 60);
+    font-weight: 800;
+}
+
+#txtIncorr {
+    color: rgb(231, 76, 60);
+    margin-top: 40px;
+    font-weight: 800;
+    font-size: 22px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+#cajaFin {
+    text-align: center;
+    margin: auto;
+    display: relative;
+    margin-top: 0;
+    width: 85%;
+    height: 247px;
+    padding: 5px;
+}
+
 .flexUL {
     display: flex;
     align-items: baseline;
     margin-top: -10px;
 }
 
+#h5,
+#inicio {
+    color: rgb(253, 145, 22);
+    font-weight: 400;
+}
+
 #margH5 {
     text-align: center;
     font-size: 25px;
+}
+
+.txtP {
+    margin-top: 5px;
+    font-size: 30px;
 }
 
 #inpuT {
@@ -81,6 +131,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
 }
 
