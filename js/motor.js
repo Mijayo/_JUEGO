@@ -8,7 +8,6 @@ function yoQueSe() {
 
 function consT() {
     document.getElementById("h1").innerHTML = pantallas[0].titular;
-    // document.write('<div class="lds-ring">' + "<div></div>" + "<div></div>" + "<div></div>" + "<div></div>" + '</div>');
 }
 
 function cambiaPantalla() {
@@ -16,7 +15,7 @@ function cambiaPantalla() {
     document.querySelector(".conT").style.display = "block";
 }
 
-setTimeout("cambiaPantalla()", 2500);
+setTimeout("cambiaPantalla()", 3500);
 
 var posicion = 0;
 var record = 0;
@@ -55,7 +54,7 @@ btn.addEventListener('click', function() {
         var valorSeleccion = document.querySelector('input[type=radio]:checked');
         if (!valorSeleccion) {
             console.log("algo");
-            cambiaPantalla();
+            btn = location.reload();
             return;
         } else if (valorSeleccion.value == pantallas[posicion].correcta) {
             console.log("correcta");
