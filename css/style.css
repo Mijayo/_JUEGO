@@ -5,6 +5,8 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+.conT {}
+
 #h1 {
     color: white;
     text-align: center;
@@ -73,6 +75,13 @@ body {
 
 #inpuT:hover {
     cursor: pointer;
+}
+
+.contI {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 

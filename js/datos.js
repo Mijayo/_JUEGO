@@ -8,16 +8,16 @@ var pantallas = [{
     },
     {
         "pregunta": "¿Cual es el elemento invalido para un input?",
-        "A": "source",
-        "B": "pattern",
-        "C": "required",
+        "A": "<source>",
+        "B": "<pattern>",
+        "C": "<required>",
         "correcta": "C"
     },
     {
         "pregunta": "¿Con que etiqueta HTML5 armarías el menú de navegación de un sitio?",
-        "A": "section",
-        "B": "menu",
-        "C": "nav",
+        "A": "<section>",
+        "B": "<menu>",
+        "C": "<nav>",
         "correcta": "C"
     }
 ];
