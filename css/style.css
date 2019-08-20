@@ -22,12 +22,20 @@ body {
 
 .foto {
     position: relative;
-    width: 60%;
+    width: 40%;
     height: auto;
     top: 100px;
-    left: 20%;
-    padding: 5px 0px 0px 0px;
+    left: 30%;
+    padding: 5px 0px 50px 0px;
     z-index: 99;
+}
+
+.nPregunta {
+    color: rgb(121, 121, 121);
+    margin-left: 35%;
+    position: relative;
+    top: 65px;
+    z-index: 9;
 }
 
 #caja {
@@ -35,7 +43,7 @@ body {
     box-shadow: 0px 0px 0px 0px rgba(124, 124, 124, 0.1), 0px 0px 10px 5px rgba(124, 124, 124, 0.1);
     border-radius: 20px;
     display: relative;
-    margin-top: 120px;
+    margin-top: 100px;
     width: 85%;
     padding: 5px;
 }
@@ -74,6 +82,12 @@ body {
     width: 85%;
     height: 247px;
     padding: 5px;
+}
+
+.txtA,
+.txtB,
+.txtC {
+    margin-left: 10px;
 }
 
 .flexUL {
@@ -164,5 +178,38 @@ body {
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+
+/* Desktops and laptops ----------- */
+
+@media only screen and (min-width: 1224px) {
+    /* Styles */
+    .foto {
+        position: relative;
+        width: 40%;
+        height: auto;
+        top: 100px;
+        left: 30%;
+        padding: 5px 0px 50px 0px;
+        z-index: 99;
+    }
+    .nPregunta {
+        margin-left: 45%;
+        position: relative;
+        top: 65px;
+        z-index: 9;
+    }
+    #inpuT {
+        color: white;
+        display: relative;
+        border: none;
+        background-color: rgb(253, 145, 22);
+        margin-left: 47%;
+        padding: 2%;
+        width: 80px;
+        outline: none;
+        margin-top: 40px;
     }
 }

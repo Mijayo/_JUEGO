@@ -20,25 +20,34 @@ setTimeout("cambiaPantalla()", 3500);
 var posicion = 0;
 var record = 0;
 var fallaste = 0;
+var nPre = 1;
 
 muestraPreguntas(posicion);
 
 function muestraPreguntas(posicion) {
+    document.getElementById("nPre").innerText = nPre;
+    document.getElementById("jSonNP").innerText = pantallas.length;
     document.getElementById("h5").innerText = pantallas[posicion].pregunta;
     document.querySelector(".txtA").innerText = pantallas[posicion].A;
     document.querySelector(".txtB").innerText = pantallas[posicion].B;
     document.querySelector(".txtC").innerText = pantallas[posicion].C;
 }
 
+// Boton enviar
+
 var btn = document.querySelector("#inpuT");
 
 btn.addEventListener('click', function() {
 
-    if (posicion < pantallas.length - 1) {
-        var valorSeleccion = document.querySelector('input[type=radio]:checked');
+    var valorSeleccion;
 
+    if (posicion < pantallas.length - 1) {
+        valorSeleccion = document.querySelector('input[type=radio]:checked');
+        document.getElementById("nPre").innerText = nPre++;
         if (!valorSeleccion) {
             alert("selecciona una opcion para continuar");
+            // con nPre-- no nos suma 1 cuando nos equivocamos y asi resolvemos el BUG
+            nPre--;
             return;
         } else if (valorSeleccion.value == pantallas[posicion].correcta) {
             console.log("correcta");
@@ -51,7 +60,7 @@ btn.addEventListener('click', function() {
         muestraPreguntas(posicion);
         valorSeleccion.checked = false;
     } else {
-        var valorSeleccion = document.querySelector('input[type=radio]:checked');
+        valorSeleccion = document.querySelector('input[type=radio]:checked');
         if (!valorSeleccion) {
             console.log("algo");
             btn = location.reload();
