@@ -5,39 +5,6 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-.conT {}
-
-#h1 {
-    text-align: center;
-    color: black;
-    font-size: 25px;
-    padding-top: 20px;
-}
-
-.header {
-    position: absolute;
-    width: 100%;
-    height: 90px;
-}
-
-.foto {
-    position: relative;
-    width: 40%;
-    height: auto;
-    top: 100px;
-    left: 30%;
-    padding: 5px 0px 50px 0px;
-    z-index: 99;
-}
-
-.nPregunta {
-    color: rgb(121, 121, 121);
-    margin-left: 35%;
-    position: relative;
-    top: 65px;
-    z-index: 9;
-}
-
 #caja {
     margin: auto;
     box-shadow: 0px 0px 0px 0px rgba(124, 124, 124, 0.1), 0px 0px 10px 5px rgba(124, 124, 124, 0.1);
@@ -112,19 +79,7 @@ body {
     font-size: 30px;
 }
 
-#inpuT {
-    color: white;
-    display: relative;
-    border: none;
-    background-color: rgb(253, 145, 22);
-    margin-left: 40%;
-    padding: 2%;
-    width: 80px;
-    outline: none;
-    margin-top: 40px;
-}
-
-#inpuT:hover {
+#btnEnv:hover {
     cursor: pointer;
 }
 
@@ -186,30 +141,45 @@ body {
 
 @media only screen and (min-width: 1224px) {
     /* Styles */
+    .conT {
+        max-height: 100vh;
+    }
+    .header {
+        position: absolute;
+        width: 100%;
+        height: 90px;
+    }
+    #h1 {
+        text-align: center;
+        color: rgb(39, 39, 39);
+        font-size: 16px;
+        padding-top: 20px;
+    }
     .foto {
         position: relative;
-        width: 40%;
-        height: auto;
-        top: 100px;
-        left: 30%;
-        padding: 5px 0px 50px 0px;
+        width: 15%;
+        top: 80px;
+        left: 42%;
+        padding: 5px 0px 25px 0px;
         z-index: 99;
     }
     .nPregunta {
-        margin-left: 45%;
+        color: rgb(99, 99, 99);
+        font-size: 10px;
+        margin-left: 46%;
         position: relative;
         top: 65px;
         z-index: 9;
     }
-    #inpuT {
+    #btnEnv {
         color: white;
         display: relative;
         border: none;
         background-color: rgb(253, 145, 22);
-        margin-left: 47%;
-        padding: 2%;
+        margin-left: 46%;
+        padding: 1%;
         width: 80px;
         outline: none;
-        margin-top: 40px;
+        margin-top: 30px;
     }
 }

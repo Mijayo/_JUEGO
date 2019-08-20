@@ -35,7 +35,7 @@ function muestraPreguntas(posicion) {
 
 // Boton enviar
 
-var btn = document.querySelector("#inpuT");
+var btn = document.querySelector("#btnEnv");
 
 btn.addEventListener('click', function() {
 
