@@ -49,24 +49,24 @@ var pantallas = [{
         "correcta": "A"
     },
     {
-        "pregunta": "¿ 8 ?",
-        "A": "Si",
-        "B": "No",
-        "C": "Depende de la cobertura",
-        "correcta": "A"
+        "pregunta": "¿ Selecciona la etiqueta errónea ?",
+        "A": "<meter>",
+        "B": "<post>",
+        "C": "<hgroup>",
+        "correcta": "C"
     },
     {
-        "pregunta": "¿ 9 ?",
-        "A": "Si",
-        "B": "No",
-        "C": "Depende de la cobertura",
-        "correcta": "A"
+        "pregunta": "¿ Cuál permite mostrar un valor por defecto en un elemento input ?",
+        "A": "Content",
+        "B": "Placeholder.",
+        "C": "Source",
+        "correcta": "B"
     },
     {
-        "pregunta": "¿ 10 ?",
-        "A": "Si",
-        "B": "No",
-        "C": "Depende de la cobertura",
-        "correcta": "A"
+        "pregunta": "¿ En HTML, los elementos de una lista no ordenada se definen con ?",
+        "A": "<li>",
+        "B": "<ul>",
+        "C": "<ol>",
+        "correcta": "B"
     }
 ];
