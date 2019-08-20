@@ -1,3 +1,8 @@
+var posicion = 0;
+var record = 0;
+var fallaste = 0;
+var nPre = 1;
+
 yoQueSe();
 
 var spin = setInterval(yoQueSe, 1000);
@@ -16,11 +21,6 @@ function cambiaPantalla() {
 }
 
 setTimeout("cambiaPantalla()", 3500);
-
-var posicion = 0;
-var record = 0;
-var fallaste = 0;
-var nPre = 1;
 
 muestraPreguntas(posicion);
 
