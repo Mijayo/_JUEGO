@@ -36,6 +36,8 @@ function muestraPreguntas(posicion) {
 // Boton enviar
 
 var btn = document.querySelector("#btnEnv");
+var btnH = document.querySelector("#btnH");
+//console.log(btn.innerHTML = "volver");
 
 btn.addEventListener('click', function() {
 
@@ -83,6 +85,12 @@ btn.addEventListener('click', function() {
                                                         </div>
                                                         ${'<p class="txtP"><span id="textFallos">'+fallaste+'</span></p>'}
                                                     </div> `;
-        btn.value = "volver";
+
+        btnH.style.visibility = "visible";
+        btn.style.visibility = "hidden";
     }
+});
+
+btnH.addEventListener('click', function() {
+    btnH = location.reload();
 });
