@@ -16,11 +16,11 @@ function consT() {
 }
 
 function cambiaPantalla() {
-    document.querySelector(".contI").style.display = "none";
+    document.querySelector(".contSpiner").style.display = "none";
     document.querySelector(".conT").style.display = "block";
 }
 
-setTimeout("cambiaPantalla()", 3500);
+setTimeout("cambiaPantalla()", 1800);
 
 muestraPreguntas(posicion);
 
@@ -73,7 +73,7 @@ btn.addEventListener('click', function() {
             fallaste++;
         }
         document.getElementById("caja").innerHTML = "";
-        document.getElementById("caja").innerHTML = `<div id='cajaFin'>
+        document.getElementById("caja").innerHTML = `<div>
                                                         <div>
                                                         <div id='txtCorr'>Correctas</div>
                                                         </div>

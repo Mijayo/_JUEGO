@@ -14,7 +14,7 @@ var pantallas = [{
         "correcta": "C"
     },
     {
-        "pregunta": "¿ Con qué etiqueta HTML5 armarías el menú de navegación de un sitio ?",
+        "pregunta": "¿ Con qué etiqueta HTML5 crearías el menú de navegación de un site ?",
         "A": "<section>",
         "B": "<menu>",
         "C": "<nav>",
