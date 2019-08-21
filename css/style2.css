@@ -113,11 +113,24 @@ input[type='radio']:hover {
     outline: none;
     margin-top: 45px;
     padding: 14px;
-    margin-bottom: 75px;
 }
 
 #btnEnv:hover {
     cursor: pointer;
+}
+
+#mG {
+    /* border: 1px solid red; */
+    min-height: 300px;
+    margin-bottom: 75px;
+}
+
+#firma {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 60px;
+    width: 140px;
 }
 
 
