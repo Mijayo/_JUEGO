@@ -33,11 +33,10 @@ function muestraPreguntas(posicion) {
     document.querySelector(".txtC").innerText = pantallas[posicion].C;
 }
 
-// Boton enviar
+// Boton enviar y volver
 
 var btn = document.querySelector("#btnEnv");
 var btnH = document.querySelector("#btnH");
-//console.log(btn.innerHTML = "volver");
 
 btn.addEventListener('click', function() {
 
@@ -85,12 +84,14 @@ btn.addEventListener('click', function() {
                                                         </div>
                                                         ${'<p class="txtP"><span id="textFallos">'+fallaste+'</span></p>'}
                                                     </div> `;
-
+        // solucion al bug de los botones primer paso
         btnH.style.visibility = "visible";
         btn.style.visibility = "hidden";
     }
 });
 
+
+// solucion al bug de los botones segundo paso
 btnH.addEventListener('click', function() {
     btnH = location.reload();
 });
