@@ -113,6 +113,7 @@ input[type='radio']:hover {
     outline: none;
     margin-top: 45px;
     padding: 14px;
+    margin-bottom: 75px;
 }
 
 #btnEnv:hover {

@@ -20,7 +20,7 @@ function cambiaPantalla() {
     document.querySelector(".conT").style.display = "block";
 }
 
-setTimeout("cambiaPantalla()", 1800);
+setTimeout('cambiaPantalla()', 1800);
 
 muestraPreguntas(posicion);
 
